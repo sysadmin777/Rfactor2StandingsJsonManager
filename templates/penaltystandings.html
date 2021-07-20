@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block body %}
+<form action="/penaltygenjson" method="POST">
+
+<table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">Driver Name</th>
+        <th scope="col">Current Position</th>
+        <th scope="col">Previous Position</th>
+      </tr>
+    </thead>
+<tbody>
+
+{% for key in positions %}
+<tr>
+    
+    <td>{{key[0]}}</td>
+    <td>{{key[1]}}</td>
+    <td>{{key[2]}}</td>
+  </tr>
+    {% for p in key[3] %}
+    <tr>
+    <td><input value={{p['points']}} name={{key[1]}}{{loop.index}} type="text" /></td>
+    {% endfor %}
+  </tr>
+
+{% endfor %}
+
+<tr><td></td><td><button type="submit" class="btn btn-primary">Submit</button></td><td></td></tr></table>
+</form>
+
+{% endblock %}

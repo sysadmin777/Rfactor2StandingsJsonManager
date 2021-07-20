@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block body %}
+<form action="/genjson" method="POST">
+
+<table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">Driver Name</th>
+        <th scope="col">Current Position</th>
+        <th scope="col">Previous Position</th>
+        <th scope="col">Add Points</th>
+      </tr>
+    </thead>
+<tbody>
+
+{% for key in positions %}
+<tr>
+    
+    <td>{{key[0]}}</td>
+    <td>{{key[1]}}</td>
+    <td>{{key[2]}}</td>
+    <td><input name={{key[1]}} type="number" /></td>
+  </tr>
+
+{% endfor %}
+
+<tr><td></td><td><button type="submit" class="btn btn-primary">Submit</button></td><td></td></tr></table>
+</form>
+
+{% endblock %}

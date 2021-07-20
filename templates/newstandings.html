@@ -1,0 +1,9 @@
+    <table>
+    <tr><th>Driver</th><th>Current Position</th><th>Previous Position</th><th>New Points</th</tr>
+    
+    {% for key in positions %}
+    <tr><td>{{key.driverName}}</td><td>{{key.position}}</td><td>{{key.previousPosition}}</td><td>{{key.totalPoints}}</td></tr>
+    {% endfor %}
+    
+    </table>
+<a href="/downloads/{{filename}}">Download New JSON</a>

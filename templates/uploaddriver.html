@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div class="container">
+  <div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-8"><h3>Add Driver to standings</h3>
+      <p>
+        <ul>
+          <li>This app allows you to add a single driver to your standings</li>
+          <li>This app uses default values for vehicle files</li>
+          <li>Please verify your JSON file after downloading and update default values (if needed)</li>
+          <li>This must be a standings.json file (duh) </li>
+          <li>The new driver should appear in last place</li>
+        </ul>
+      </p>
+  </div>
+  <div class="col-md-2"></div>
+  </div>
+  </div>
+<br /><br />
+  <div class="container">
+    <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <form action="checkstandingfile" method=post enctype=multipart/form-data>
+        <div class="form-group">
+          <label for="file">Select a JSON file</label>
+          <input name="file" type="file" class="form-control" id="file" aria-describedby="Select your standings.json to update" placeholder="">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+    <div class="col-md-2"></div>
+    </div>
+    </div>
+
+
+{% endblock %}

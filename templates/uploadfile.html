@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div class="container">
+  <div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-8"><h3>Standings.JSON Upload Requirements</h3>
+      <p>
+        <ul>
+          <li>You will want to include any penalty deducations before using this app</li>
+          <li>In the 'rounds' section there must be 1 or more 'null' values</li>
+          <li>This app looks for null values and fills in point values you enter later</li>
+          <li>This must be a standings.json file (duh) </li>
+          <li>This app sorts the standings in the JSON by position</li>
+        </ul>
+      </p>
+  </div>
+  <div class="col-md-2"></div>
+  </div>
+  </div>
+<br /><br />
+  <div class="container">
+    <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+      <form action="checkstandingfile" method=post enctype=multipart/form-data>
+        <div class="form-group">
+          <label for="file">Select a JSON file</label>
+          <input name="file" type="file" class="form-control" id="file" aria-describedby="Select your standings.json to update" placeholder="">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+    <div class="col-md-2"></div>
+    </div>
+    </div>
+
+
+{% endblock %}

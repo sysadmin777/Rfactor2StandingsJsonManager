@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<h3 style="text-align: center;">Add New Driver</h3> 
+<form action="/commitdriver" method="POST">
+    
+    <strong>Driver Name</strong> <input name="driverName" type="text" /> (First and Last Name)
+    <br />
+    <br />
+    <strong>Car Number</strong> <input name="carNumber" type="text" />
+    <br />
+    <br />
+    <strong>Team Name</strong> <input name="teamName" type="text" />
+    <br />
+    <br />
+    <strong>Vehicle Name</strong> <input name="vehicleName" type="text" /> (Example: BMW M5, Porshe 911 GT3, Dallara)
+    <br />
+    <br />
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{% endblock %}
