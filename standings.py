@@ -1,5 +1,6 @@
 import json
-from flask import jsonify, session
+from flask import session
+
 
 def ReadStandings(filename):
     with open('uploads/'+filename, 'r') as myfile:

@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 UPLOAD_FOLDER = 'uploads'
 ALLOWED_EXTENSIONS = ['json', 'JSON']
-app.secret_key='de3fr4gt5DE#FR$GT%'
+app.secret_key=os.getenv('SECRET_KEY')
 app.config['SESSION_TYPE'] = 'filesystem'
 
 def allowed_file(filename):

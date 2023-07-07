@@ -1,20 +1,14 @@
 # Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+This tool is used for the Rfactor 2 simulator. The goal of this app is to upload a standing.json file and allows the user to update points. The Rfactor 2 simulator requires users to manually edit the file. This app fixes that issue.
 
 # Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+1. Clone this repo
+2. export SECRET_KEY="something"
+3. run "flask --app main run" from the root directory
+4. open browser to http://127.0.0.1:5000
 
 # Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+See getting started
 
 # Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
-
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+You can contribute to this repository by creating a fork or branch and creating a PR request. 
